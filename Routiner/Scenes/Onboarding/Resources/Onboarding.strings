@@ -1,0 +1,18 @@
+"stepOneTitle" = "Crie\nBons Hábitos";
+"stepOneDescription" = "Transforme sua vida aos poucos, adotando novos\nhábitos saudáveis e mantendo-os.";
+
+"stepTwoTitle" = "Acompanhe\nseu progresso";
+"stepTwoDescription" = "A cada dia você está a um passo de atingir \nseu objetivo. Não desista!";
+
+"stepThreeTitle" = "Juntos somos mais fortes";
+"stepThreeDescription" = "Encontre amigos para debater interesses em comum.\nEncare desafios juntos.";
+
+"termsTitle" = "Ao continuar você aceita os Termos de Serviço e Política de privacidade";
+
+"facebook" = "Facebook";
+"google" = "Google";
+"apple" = "Apple";
+"email" = "E-mail";
+"loginButtonName" = "Continuar com %@";
+"loginAccessibilityButtonName" = "Faça login na sua conta, você deseja continuar com %@ ?";
+"pageAccessibility" = "Página %@ de %@. Para ver mais informações clique duas vezes na tela e deslize para esquerda e para direita";
