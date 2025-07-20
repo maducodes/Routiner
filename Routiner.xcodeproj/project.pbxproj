@@ -50,6 +50,20 @@
 		6BFDDAD92E1ED49E00EF7E80 /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDDAD82E1ED49E00EF7E80 /* OnboardingInteractor.swift */; };
 		6BFDDADC2E1ED4FF00EF7E80 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDDADB2E1ED4FF00EF7E80 /* Button.swift */; };
 		6BFDDADE2E1ED50700EF7E80 /* ButtonModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDDADD2E1ED50700EF7E80 /* ButtonModels.swift */; };
+		6BFDDAE52E1EEFA800EF7E80 /* ContinueWithEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDDAE42E1EEFA800EF7E80 /* ContinueWithEmailView.swift */; };
+		6BFDDAE72E1EEFC900EF7E80 /* ContinueWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDDAE62E1EEFC900EF7E80 /* ContinueWithEmailViewController.swift */; };
+		6BFDDAE92E1EEFDF00EF7E80 /* ContinueWithEmailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDDAE82E1EEFDF00EF7E80 /* ContinueWithEmailRouter.swift */; };
+		6BFDDAEB2E1EF01000EF7E80 /* ContinueWithEmailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDDAEA2E1EF01000EF7E80 /* ContinueWithEmailInteractor.swift */; };
+		6BFDDAED2E1EF02000EF7E80 /* ContinueWithEmailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDDAEC2E1EF02000EF7E80 /* ContinueWithEmailPresenter.swift */; };
+		6BFDDAEF2E1EF03500EF7E80 /* ContinueWithEmailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDDAEE2E1EF03500EF7E80 /* ContinueWithEmailWorker.swift */; };
+		6BFDDAF12E1EF05B00EF7E80 /* ContinueWithEmail.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDDAF02E1EF05B00EF7E80 /* ContinueWithEmail.strings */; };
+		6BFDDAF32E1EF06800EF7E80 /* ContinueWithEmailKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDDAF22E1EF06800EF7E80 /* ContinueWithEmailKeys.swift */; };
+		6BFDDAF52E1EF08400EF7E80 /* ContinueWithEmailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDDAF42E1EF08400EF7E80 /* ContinueWithEmailModels.swift */; };
+		6BFDDAF82E1EF0EE00EF7E80 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDDAF72E1EF0EE00EF7E80 /* UIView+Ext.swift */; };
+		6BFDDAFB2E1EF12300EF7E80 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDDAFA2E1EF12300EF7E80 /* Header.swift */; };
+		6BFDDAFD2E1EF12A00EF7E80 /* HeaderModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDDAFC2E1EF12A00EF7E80 /* HeaderModels.swift */; };
+		6BFDDB002E1EF15300EF7E80 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDDAFF2E1EF15300EF7E80 /* TextField.swift */; };
+		6BFDDB022E1EF16000EF7E80 /* TextFieldModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFDDB012E1EF16000EF7E80 /* TextFieldModels.swift */; };
 		87281FF8783249DFE44F1ABB /* Pods_Routiner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B08376F42857932C47EDDFB /* Pods_Routiner.framework */; };
 		F01DE320B5467DC4A7AAEB44 /* Pods_RoutinerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA6C78FB4D86E2B7B44589D /* Pods_RoutinerTests.framework */; };
 /* End PBXBuildFile section */
@@ -108,6 +122,20 @@
 		6BFDDAD82E1ED49E00EF7E80 /* OnboardingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInteractor.swift; sourceTree = "<group>"; };
 		6BFDDADB2E1ED4FF00EF7E80 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		6BFDDADD2E1ED50700EF7E80 /* ButtonModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModels.swift; sourceTree = "<group>"; };
+		6BFDDAE42E1EEFA800EF7E80 /* ContinueWithEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueWithEmailView.swift; sourceTree = "<group>"; };
+		6BFDDAE62E1EEFC900EF7E80 /* ContinueWithEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueWithEmailViewController.swift; sourceTree = "<group>"; };
+		6BFDDAE82E1EEFDF00EF7E80 /* ContinueWithEmailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueWithEmailRouter.swift; sourceTree = "<group>"; };
+		6BFDDAEA2E1EF01000EF7E80 /* ContinueWithEmailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueWithEmailInteractor.swift; sourceTree = "<group>"; };
+		6BFDDAEC2E1EF02000EF7E80 /* ContinueWithEmailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueWithEmailPresenter.swift; sourceTree = "<group>"; };
+		6BFDDAEE2E1EF03500EF7E80 /* ContinueWithEmailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueWithEmailWorker.swift; sourceTree = "<group>"; };
+		6BFDDAF02E1EF05B00EF7E80 /* ContinueWithEmail.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ContinueWithEmail.strings; sourceTree = "<group>"; };
+		6BFDDAF22E1EF06800EF7E80 /* ContinueWithEmailKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueWithEmailKeys.swift; sourceTree = "<group>"; };
+		6BFDDAF42E1EF08400EF7E80 /* ContinueWithEmailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueWithEmailModels.swift; sourceTree = "<group>"; };
+		6BFDDAF72E1EF0EE00EF7E80 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		6BFDDAFA2E1EF12300EF7E80 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		6BFDDAFC2E1EF12A00EF7E80 /* HeaderModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderModels.swift; sourceTree = "<group>"; };
+		6BFDDAFF2E1EF15300EF7E80 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		6BFDDB012E1EF16000EF7E80 /* TextFieldModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModels.swift; sourceTree = "<group>"; };
 		7CA6C78FB4D86E2B7B44589D /* Pods_RoutinerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoutinerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5972BF837BD43F8E80F6F35 /* Pods-Routiner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Routiner.release.xcconfig"; path = "Target Support Files/Pods-Routiner/Pods-Routiner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +210,7 @@
 		6BFDDA8D2E1ECB0800EF7E80 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDDAE02E1EDDE900EF7E80 /* Login */,
 				6BFDDA992E1ECCCF00EF7E80 /* Onboarding */,
 				6BFDDA902E1ECC2800EF7E80 /* LaunchScreen */,
 			);
@@ -202,6 +231,7 @@
 		6BFDDA8F2E1ECB2300EF7E80 /* DSKit */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDDAF62E1EF0DC00EF7E80 /* Utils */,
 				6BFDDAB12E1ECDA000EF7E80 /* Assets */,
 				6BFDDAB02E1ECD9A00EF7E80 /* Components */,
 			);
@@ -211,7 +241,7 @@
 		6BFDDA902E1ECC2800EF7E80 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
-				6BFDDADF2E1ED52700EF7E80 /* Views */,
+				6BFDDA972E1ECCB800EF7E80 /* LaunchScreenView.swift */,
 				6BFDDA612E1EC94000EF7E80 /* LaunchScreenViewController.swift */,
 				6BFDDA912E1ECC6C00EF7E80 /* LaunchScreenPresenter.swift */,
 				6BFDDA932E1ECC7800EF7E80 /* LaunchScreenInteractor.swift */,
@@ -248,6 +278,8 @@
 		6BFDDAB02E1ECD9A00EF7E80 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				6BFDDAFE2E1EF14500EF7E80 /* TextField */,
+				6BFDDAF92E1EF11700EF7E80 /* Header */,
 				6BFDDADA2E1ED4EE00EF7E80 /* Button */,
 			);
 			path = Components;
@@ -332,12 +364,62 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
-		6BFDDADF2E1ED52700EF7E80 /* Views */ = {
+		6BFDDAE02E1EDDE900EF7E80 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				6BFDDA972E1ECCB800EF7E80 /* LaunchScreenView.swift */,
+				6BFDDAE32E1EEF4200EF7E80 /* Resources */,
+				6BFDDAE22E1EEF3D00EF7E80 /* Models */,
+				6BFDDAE42E1EEFA800EF7E80 /* ContinueWithEmailView.swift */,
+				6BFDDAE62E1EEFC900EF7E80 /* ContinueWithEmailViewController.swift */,
+				6BFDDAE82E1EEFDF00EF7E80 /* ContinueWithEmailRouter.swift */,
+				6BFDDAEA2E1EF01000EF7E80 /* ContinueWithEmailInteractor.swift */,
+				6BFDDAEC2E1EF02000EF7E80 /* ContinueWithEmailPresenter.swift */,
+				6BFDDAEE2E1EF03500EF7E80 /* ContinueWithEmailWorker.swift */,
 			);
-			path = Views;
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6BFDDAE22E1EEF3D00EF7E80 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDDAF42E1EF08400EF7E80 /* ContinueWithEmailModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6BFDDAE32E1EEF4200EF7E80 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDDAF02E1EF05B00EF7E80 /* ContinueWithEmail.strings */,
+				6BFDDAF22E1EF06800EF7E80 /* ContinueWithEmailKeys.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6BFDDAF62E1EF0DC00EF7E80 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDDAF72E1EF0EE00EF7E80 /* UIView+Ext.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6BFDDAF92E1EF11700EF7E80 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDDAFA2E1EF12300EF7E80 /* Header.swift */,
+				6BFDDAFC2E1EF12A00EF7E80 /* HeaderModels.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		6BFDDAFE2E1EF14500EF7E80 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				6BFDDAFF2E1EF15300EF7E80 /* TextField.swift */,
+				6BFDDB012E1EF16000EF7E80 /* TextFieldModels.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 		8BB0404914EF1B9445F57A23 /* Pods */ = {
@@ -437,6 +519,7 @@
 			files = (
 				6BFDDAA22E1ECD0500EF7E80 /* airbnb-cereal-app-bold.ttf in Resources */,
 				6BFDDA6A2E1EC94400EF7E80 /* LaunchScreen.storyboard in Resources */,
+				6BFDDAF12E1EF05B00EF7E80 /* ContinueWithEmail.strings in Resources */,
 				6BFDDA672E1EC94400EF7E80 /* Assets.xcassets in Resources */,
 				6BFDDAC92E1ED3D100EF7E80 /* Onboarding.strings in Resources */,
 				6BFDDA9E2E1ECD0400EF7E80 /* airbnb-cereal-app-medium.ttf in Resources */,
@@ -525,28 +608,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BFDDAE72E1EEFC900EF7E80 /* ContinueWithEmailViewController.swift in Sources */,
 				6BFDDAD72E1ED48400EF7E80 /* OnboardingPresenter.swift in Sources */,
 				6BFDDADE2E1ED50700EF7E80 /* ButtonModels.swift in Sources */,
 				6BFDDA622E1EC94000EF7E80 /* LaunchScreenViewController.swift in Sources */,
 				6BFDDAD52E1ED47300EF7E80 /* OnboardingRouter.swift in Sources */,
 				6BFDDAA52E1ECD2700EF7E80 /* Colors.swift in Sources */,
 				6BFDDAAB2E1ECD4200EF7E80 /* Localizable.swift in Sources */,
+				6BFDDAED2E1EF02000EF7E80 /* ContinueWithEmailPresenter.swift in Sources */,
+				6BFDDAE52E1EEFA800EF7E80 /* ContinueWithEmailView.swift in Sources */,
 				6BFDDAAE2E1ECD7C00EF7E80 /* Images.swift in Sources */,
 				6BFDDA962E1ECC8300EF7E80 /* LaunchScreenRouter.swift in Sources */,
 				6BFDDADC2E1ED4FF00EF7E80 /* Button.swift in Sources */,
 				6BFDDA982E1ECCB800EF7E80 /* LaunchScreenView.swift in Sources */,
+				6BFDDAF82E1EF0EE00EF7E80 /* UIView+Ext.swift in Sources */,
+				6BFDDAE92E1EEFDF00EF7E80 /* ContinueWithEmailRouter.swift in Sources */,
+				6BFDDAF32E1EF06800EF7E80 /* ContinueWithEmailKeys.swift in Sources */,
+				6BFDDAFB2E1EF12300EF7E80 /* Header.swift in Sources */,
 				6BFDDA922E1ECC6C00EF7E80 /* LaunchScreenPresenter.swift in Sources */,
 				6BFDDAB32E1ECFC300EF7E80 /* OnboardingViewController.swift in Sources */,
+				6BFDDAFD2E1EF12A00EF7E80 /* HeaderModels.swift in Sources */,
 				6BFDDAD12E1ED43800EF7E80 /* OnboardingModels.swift in Sources */,
 				6BFDDACF2E1ED41400EF7E80 /* OnboardingItemCell.swift in Sources */,
 				6BFDDA5E2E1EC94000EF7E80 /* AppDelegate.swift in Sources */,
+				6BFDDB002E1EF15300EF7E80 /* TextField.swift in Sources */,
 				6BFDDA602E1EC94000EF7E80 /* SceneDelegate.swift in Sources */,
 				6BFDDAA82E1ECD3200EF7E80 /* Typography.swift in Sources */,
 				6BFDDAD32E1ED46300EF7E80 /* OnboardingWorker.swift in Sources */,
 				6BFDDA942E1ECC7800EF7E80 /* LaunchScreenInteractor.swift in Sources */,
 				6BFDDACB2E1ED3DD00EF7E80 /* OnboardingKeys.swift in Sources */,
 				6BFDDACD2E1ED40200EF7E80 /* OnboardingView.swift in Sources */,
+				6BFDDAEB2E1EF01000EF7E80 /* ContinueWithEmailInteractor.swift in Sources */,
 				6BFDDAD92E1ED49E00EF7E80 /* OnboardingInteractor.swift in Sources */,
+				6BFDDB022E1EF16000EF7E80 /* TextFieldModels.swift in Sources */,
+				6BFDDAEF2E1EF03500EF7E80 /* ContinueWithEmailWorker.swift in Sources */,
+				6BFDDAF52E1EF08400EF7E80 /* ContinueWithEmailModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

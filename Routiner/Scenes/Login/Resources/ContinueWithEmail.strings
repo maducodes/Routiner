@@ -1,0 +1,10 @@
+"headerTitle" = "Continuar com E-mail";
+"headerButtonAcessibility" = "Voltar";
+"textFieldEmail" = "E-mail";
+"textFieldEmailPlaceholder" = "Insira seu E-mail";
+"textFieldPassword" = "Senha";
+"textFieldPasswordPlaceholder" = "Insira sua Senha";
+"forgotPassword" = "Eu esqueci minha senha";
+"createAccount" = "Não tem conta? Crie agora mesmo!";
+"next" = "Próximo";
+"nextAccessibility" = "Próximo, clique duas vezes para ir para proxima etapa.";

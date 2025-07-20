@@ -13,8 +13,8 @@ final class OnboardingRouter: OnboardRoutingLogic, OnboardingDataPassing {
     var dataStore: OnboardingDataStore?
     
     func routeContinueWithEmail() {
-//        let nextViewController = ContinueWithEmailViewController()
-//        nextViewController.navigationItem.hidesBackButton = true
-//        viewController?.navigationController?.pushViewController(nextViewController, animated: true)
+        let nextViewController = ContinueWithEmailViewController()
+        nextViewController.navigationItem.hidesBackButton = true
+        viewController?.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }

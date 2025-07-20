@@ -6,6 +6,8 @@ public final class Button: UIView {
     var viewModel: ButtonViewModel
     private var buttonConfig = UIButton.Configuration.filled()
     
+    var didTapButton: (() -> ())?
+    
     lazy var button: UIButton = {
         let button = UIButton()
         button.backgroundColor = .clear
@@ -55,6 +57,7 @@ public final class Button: UIView {
     }
     
     @objc private func buttonPressed() {
+        didTapButton?()
         buildLayoutColorsWhenPressed()
         UIImpactFeedbackGenerator().impactOccurred()
     }
