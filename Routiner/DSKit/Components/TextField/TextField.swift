@@ -3,21 +3,18 @@ import UIKit
 import SnapKit
 
 public final class TextField: UIView {
-    private(set) var value: String = ""
     var onChangeTextField: ((String) -> ())?
-    var tapButtonIcon: (() -> ())?
+    var didTapButtonIcon: (() -> ())?
     
-    var viewModel: TextFieldViewModel {
+    var viewModel: TextFieldViewModel? {
         didSet {
             setup()
         }
     }
     
-    init(viewModel: TextFieldViewModel) {
-        self.viewModel = viewModel
-        
-        super.init(frame: .zero)
-        self.setup()
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
     }
     
     required init?(coder: NSCoder) {
@@ -26,8 +23,6 @@ public final class TextField: UIView {
     
     lazy var holderLabel: UILabel = {
         let label = UILabel()
-        label.font = Typography.setTypography(using: .chip)
-        label.textColor = Colors.Primary.Black.black100
         return label
     }()
     
@@ -39,8 +34,6 @@ public final class TextField: UIView {
     
     lazy var textField: UITextField = {
         let textField = UITextField()
-        textField.addTarget(self, action: #selector(handleChangeTextField), for: .editingChanged)
-        textField.keyboardType = viewModel.keyboardType ?? .default
         return textField
     }()
     
@@ -55,45 +48,39 @@ public final class TextField: UIView {
     }()
     
     private func setup() {
-        holderLabel.text = viewModel.label.uppercased()
-        
-        let attributedPaceholder = NSAttributedString(string: viewModel.placeholder,
-                                                      attributes: [.font: Typography.setTypography(using: .title),
-                                                        .foregroundColor: Colors.Primary.Black.black20 ?? UIColor()])
-        textField.attributedPlaceholder = attributedPaceholder
-        textField.textColor = Colors.Primary.Black.black100
-        textField.font = Typography.setTypography(using: .title)
-        textField.isSecureTextEntry = viewModel.isSecutiryTextEntry
-        
-        bottomLine.backgroundColor = viewModel.borderColor
+        holderLabel.attributedText = viewModel?.label
+        textField.isSecureTextEntry = viewModel?.isSecutiryTextEntry ?? false
+        textField.keyboardType = viewModel?.keyboardType ?? .default
+        textField.attributedPlaceholder = viewModel?.placeholder
+        textField.addTarget(self, action: #selector(handleChangeTextField), for: .editingChanged)
+        bottomLine.backgroundColor = viewModel?.borderColor
         
         buildViewHierarchy()
         buildConstraints()
-        
-        if let image = viewModel.imageIcon {
-            setImageIcon(image)
-        }
+        setupImageIcon()
     }
     
-    @objc
-    func handleChangeTextField() {
-        self.value = textField.text ?? ""
+    @objc func handleChangeTextField() {
         onChangeTextField?(textField.text ?? "")
     }
     
-    @objc
-    func handleTapButtonIcon() {
-        tapButtonIcon?()
+    @objc func handleTapButtonIcon() {
+        didTapButtonIcon?()
     }
     
     func changeVisibilityImage(isHidden: Bool) {
         imageIcon.isHidden = isHidden
     }
     
-    private func setImageIcon(_ image: UIImage) {
-        imageIcon.setImage(viewModel.imageIcon, for: .normal)
+    func clearValue() {
+        textField.text = ""
+    }
+    
+    private func setupImageIcon() {
+        guard let image = viewModel?.imageIcon else { return }
+        imageIcon.setImage(viewModel?.imageIcon, for: .normal)
         imageIcon.addTarget(self, action: #selector(handleTapButtonIcon), for: .touchUpInside)
-        imageIcon.isHidden = !viewModel.isVisibleImageIcon
+        imageIcon.isHidden = !(viewModel?.isVisibleImageIcon ?? false)
         containerStackView.addArrangedSubview(imageIcon)
     }
     

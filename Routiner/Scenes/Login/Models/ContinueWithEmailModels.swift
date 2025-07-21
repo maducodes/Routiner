@@ -7,12 +7,14 @@ enum ContinueWithEmail {
         struct Request {}
         struct Response {}
         struct ViewModel {
-            let emailBorderColor: UIColor?
-            let passwordBorderColor: UIColor?
-            let emailIcon: UIImage?
-            let passwordIcon: UIImage?
-            let isVisibleEmailIcon: Bool
-            let isVisiblePasswordIcon: Bool
+            let headerViewModel: HeaderViewModel
+            let emailTextField: TextFieldViewModel
+            let passwordTextField: TextFieldViewModel
+            let forgotPasswordTitle: NSAttributedString
+            let createAccountTitle: NSAttributedString
+            let forgotPasswordTitleColor: UIColor
+            let createAccountTitleColor: UIColor
+            let buttonContinueViewModel: ButtonViewModel
         }
     }
 }

@@ -4,11 +4,11 @@ import UIKit
 
 protocol ContinueWithEmailViewDelegate {
     func onChangeTextField(_ value: String, _ textFieldType: ContinueWithEmailTextFieldType)
-    func onTapButtonTextField(_ textFieldType: ContinueWithEmailTextFieldType)
-    func onTapLeftIcon()
-    func onTapForgotPassword()
-    func onTapLogin(email: String, password: String)
-    func onTapCreateAccount()
+    func didTapButtonTextField(_ textFieldType: ContinueWithEmailTextFieldType)
+    func didTapLeftIcon()
+    func didTapForgotPassword()
+    func didTapLogin()
+    func didTapCreateAccount()
 }
 
 protocol ContinueWithEmailViewProtocol: UIView {
@@ -23,6 +23,7 @@ final class ContinueWithEmailView: UIView, ContinueWithEmailViewProtocol {
     private var buttonBottomConstraint: Constraint?
     
     lazy var header: Header = {
+        // TODO: Refactor header component
         let viewModel = HeaderViewModel(leftIcon: Images.arrowLeft,
                                         leftIconAccessibility: ContinueWithEmailKeys.headerButtonAcessibility.string(),
                                         title: ContinueWithEmailKeys.headerTitle.string(),
@@ -33,50 +34,29 @@ final class ContinueWithEmailView: UIView, ContinueWithEmailViewProtocol {
     }()
     
     lazy var emailTextField: TextField = {
-        let viewModel = TextFieldViewModel(placeholder: ContinueWithEmailKeys.textFieldEmailPlaceholder.string(),
-                                           label: ContinueWithEmailKeys.textFieldEmail.string(),
-                                           imageIcon: Images.clear,
-                                           isEnabled: true,
-                                           borderColor: Colors.Primary.GreenSuccess.green100,
-                                           isSecutiryTextEntry: false,
-                                           isVisibleImageIcon: false)
-        let textField = TextField(viewModel: viewModel)
+        let textField = TextField()
         return textField
     }()
     
     lazy var passwordTextField: TextField = {
-        let viewModel = TextFieldViewModel(placeholder: ContinueWithEmailKeys.textFieldPasswordPlaceholder.string(),
-                                           label: ContinueWithEmailKeys.textFieldPassword.string(),
-                                           imageIcon: Images.clear,
-                                           isEnabled: true,
-                                           borderColor: Colors.Primary.Black.black20,
-                                           isSecutiryTextEntry: true,
-                                           isVisibleImageIcon: false)
-        let textField = TextField(viewModel: viewModel)
+        let textField = TextField()
         return textField
     }()
     
     lazy var forgotPasswordLabel: UIButton = {
         let button = UIButton()
-        let attributedTitle = NSAttributedString(string: ContinueWithEmailKeys.forgotPassword.string(),
-                                                 attributes: [.font: Typography.setTypography(using: .paragraph2)])
-        button.setAttributedTitle(attributedTitle, for: .normal)
-        button.setTitleColor(Colors.Primary.Black.black60, for: .normal)
         button.addTarget(self, action: #selector(handleTapForgotPassword), for: .touchUpInside)
         return button
     }()
     
     lazy var createAccountLabel: UIButton = {
         let button = UIButton()
-        let attributedTitle = NSAttributedString(string: ContinueWithEmailKeys.createAccount.string(),
-                                                 attributes: [.font: Typography.setTypography(using: .paragraph2)])
-        button.setAttributedTitle(attributedTitle, for: .normal)
-        button.setTitleColor(Colors.Primary.Blue.blue100, for: .normal)
         button.addTarget(self, action: #selector(handleTapCreateAccount), for: .touchUpInside)
         return button
     }()
     
     lazy var buttoncontinue: Button = {
+        // TODO: Refactor Button component
         let viewModel = ButtonViewModel(showIcon: true,
                                         iconTint: Colors.Primary.Blue.blue100,
                                         weigth: .large,
@@ -137,52 +117,49 @@ final class ContinueWithEmailView: UIView, ContinueWithEmailViewProtocol {
             self.delegate?.onChangeTextField(value, .email)
         }
         
-        emailTextField.tapButtonIcon = {
-            self.delegate?.onTapButtonTextField(.email)
-        }
-        
         passwordTextField.onChangeTextField = { value in
             self.delegate?.onChangeTextField(value, .password)
         }
         
-        passwordTextField.tapButtonIcon = {
-            self.delegate?.onTapButtonTextField(.password)
+        emailTextField.didTapButtonIcon = {
+            self.delegate?.didTapButtonTextField(.email)
+        }
+
+        passwordTextField.didTapButtonIcon = {
+            self.delegate?.didTapButtonTextField(.password)
         }
         
         buttoncontinue.didTapButton = {
-            self.delegate?.onTapLogin(email: self.emailTextField.value, password: self.passwordTextField.value)
+            self.delegate?.didTapLogin()
         }
     }
     
     @objc
     private func handleTapForgotPassword() {
-        delegate?.onTapForgotPassword()
+        delegate?.didTapForgotPassword()
     }
     
     @objc
     private func handleTapCreateAccount() {
-        delegate?.onTapCreateAccount()
+        delegate?.didTapCreateAccount()
     }
     
     func clear(_ textFieldType: ContinueWithEmailTextFieldType) {
         switch textFieldType {
         case .email:
-            emailTextField.textField.text = ""
+            emailTextField.clearValue()
         case .password:
-            passwordTextField.textField.text = ""
+            passwordTextField.clearValue()
         }
-        
-        changeVisibilityImageTextField(isVisible: false, textFieldType)
     }
     
     func showScreen(viewModel: ContinueWithEmail.Model.ViewModel) {
-        emailTextField.viewModel.borderColor = viewModel.emailBorderColor
-        emailTextField.viewModel.imageIcon = viewModel.emailIcon
-        emailTextField.viewModel.isVisibleImageIcon = viewModel.isVisibleEmailIcon
-        
-        passwordTextField.viewModel.borderColor = viewModel.passwordBorderColor
-        passwordTextField.viewModel.imageIcon = viewModel.passwordIcon
-        passwordTextField.viewModel.isVisibleImageIcon = viewModel.isVisiblePasswordIcon
+        emailTextField.viewModel = viewModel.emailTextField
+        passwordTextField.viewModel = viewModel.passwordTextField
+        forgotPasswordLabel.setAttributedTitle(viewModel.forgotPasswordTitle, for: .normal)
+        forgotPasswordLabel.setTitleColor(viewModel.forgotPasswordTitleColor, for: .normal)
+        createAccountLabel.setAttributedTitle(viewModel.createAccountTitle, for: .normal)
+        createAccountLabel.setTitleColor(viewModel.createAccountTitleColor, for: .normal)
     }
     
     func changeVisibilityImageTextField(isVisible: Bool, _ textFieldType: ContinueWithEmailTextFieldType) {
@@ -240,7 +217,7 @@ final class ContinueWithEmailView: UIView, ContinueWithEmailViewProtocol {
 
 extension ContinueWithEmailView: HeaderDelegate {
     func handleTapLeftButton() {
-        delegate?.onTapLeftIcon()
+        delegate?.didTapLeftIcon()
     }
     
     func handleTapRightButton() {}

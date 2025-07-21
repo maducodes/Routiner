@@ -30,7 +30,6 @@ final class ContinueWithEmailViewController: UIViewController, ContinueWithEmail
         let router = ContinueWithEmailRouter()
         
         contentView?.delegate = self
-        
         viewController.interactor = interactor
         viewController.router = router
         interactor.presenter = presenter
@@ -53,27 +52,28 @@ final class ContinueWithEmailViewController: UIViewController, ContinueWithEmail
 }
 
 extension ContinueWithEmailViewController: ContinueWithEmailViewDelegate {
-    func onTapLogin(email: String, password: String) {
-        interactor?.login(email: email, password: password)
+    func didTapLogin() {
+        interactor?.login()
     }
     
     func onChangeTextField(_ value: String, _ textFieldType: ContinueWithEmailTextFieldType) {
         interactor?.updateVisibilityImageTextField(value, textFieldType)
+        interactor?.validateField(value, textFieldType)
     }
     
-    func onTapButtonTextField(_ textFieldType: ContinueWithEmailTextFieldType) {
+    func didTapButtonTextField(_ textFieldType: ContinueWithEmailTextFieldType) {
         interactor?.clearTextField(textFieldType)
     }
     
-    func onTapLeftIcon() {
+    func didTapLeftIcon() {
         router?.dismiss()
     }
     
-    func onTapCreateAccount() {
+    func didTapCreateAccount() {
         router?.routeToCreateAccount()
     }
     
-    func onTapForgotPassword() {
+    func didTapForgotPassword() {
         router?.routeToForgotPassword()
     }
 }
